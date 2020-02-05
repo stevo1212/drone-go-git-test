@@ -1,19 +1,5 @@
-kind: pipeline
-name: default
-
-workspace:
-  base: /go
-  path: src/github.com/dcagnetta/go-drone-hello-world
-
-steps:
-  - name: report
-    image: golang
-    volumes:
-      - name: reports
-        path: /var/reports
+pipeline:
+  build_dotnet:
+    image: microsoft/dotnet 
     commands:
-      - mkdir -p /var/reports
-      - go get
-
-
-
+      - dotnet restore
