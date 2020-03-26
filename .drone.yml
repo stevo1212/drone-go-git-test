@@ -1,5 +1,0 @@
-pipeline:
-  build_dotnet:
-    image: microsoft/dotnet 
-    commands:
-      - dotnet restore
